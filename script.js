@@ -18,6 +18,9 @@ const buttonsContainer = document.querySelector(".buttons")
 const btnRefresh = document.querySelector(".refresh")
 const btnClear = document.createElement("button")
 const boxes = document.querySelectorAll('.box')
+const btnErase = document.createElement("button")
+const pickColor = document.createElement("input")
+
 
 // annoying if you draw straight away
 /*window.onload = () => {
@@ -66,6 +69,20 @@ function clear() {
     buttonsContainer.appendChild(btnClear).classList.add("btn")
 }
 clear()
+
+function erase() {
+    const boxes = document.querySelectorAll(".box")
+    btnErase.textContent = "Erase"
+    btnErase.addEventListener('click', () => {
+        boxes.forEach(box => box.addEventListener('mouseover', () => {
+            box.style.background = "white"
+        }))
+    })
+    buttonsContainer.appendChild(btnErase).classList.add('btn')
+}
+erase()
+
+
 
 function remove() {
     const boxes = container.querySelectorAll(".box")
