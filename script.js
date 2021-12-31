@@ -94,7 +94,7 @@ function remove() {
 
     btnRefresh.addEventListener('click', () => {
         
-    let newGridSize = prompt("How big should you canvas be? Currently it's 16x16. (max. 100)")
+    let newGridSize = prompt("How big should you canvas be? (max. 100)")
     if(newGridSize === null || newGridSize < 1 || newGridSize > 100) {
         remove()
         createGrid(16, 16)
