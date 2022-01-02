@@ -20,6 +20,8 @@ const btnClear = document.createElement("button")
 const boxes = document.querySelectorAll('.box')
 const btnErase = document.createElement("button")
 const pickColor = document.createElement("input")
+pickColor.type = "color"
+buttonsContainer.appendChild(pickColor)
 
 
 // annoying if you draw straight away
@@ -57,6 +59,17 @@ function rgb() {
     buttonsContainer.appendChild(btnRgb).classList.add('btn')
 }
 rgb()
+
+function colorPicker() {
+    const boxes = document.querySelectorAll(".box")
+    boxes.forEach(box => box.addEventListener('mouseover', () => {
+        box.style.background = pickColor.value
+    }))
+}
+
+pickColor.addEventListener('click', () => {
+    colorPicker()
+})
 
 function clear() {
     const boxes = document.querySelectorAll(".box")

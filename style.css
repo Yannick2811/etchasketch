@@ -58,4 +58,10 @@ button:hover{
     opacity: 75%;
 }
 
-S
+input {
+    height: 44px;
+    background-color: #ff5938;
+    border-radius: 4px;
+    border: none;
+    width: 70px;
+}
